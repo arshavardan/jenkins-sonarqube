@@ -29,5 +29,13 @@ pipeline {
             }
             }
         }
+        stage('Run Shell Commands') {
+            steps {
+                // Step 3: Execute shell commands
+                sh '''
+                    scp -r ./* ubuntu@35.160.87.160:/home/ubuntu/website
+                '''
+            }
+        }
     }
 }
