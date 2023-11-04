@@ -24,7 +24,7 @@ pipeline {
                sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=onix-website-scan \
                    -Dsonar.projectName=onix-website-scan \
                    -Dsonar.projectVersion=1.0 \
-                   -Dsonar.sources=/var/lib/jenkins/workspace/pipeline/src/
+                   -Dsonar.sources=src/ 
                 '''
             }
             }
